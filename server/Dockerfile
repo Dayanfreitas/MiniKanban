@@ -4,7 +4,7 @@ COPY ./package*.json/ /server/
 COPY ./src/ /server/src/
 COPY ./knexfile.js /server/knexfile.js
 
-WORKDIR /server/src/
+WORKDIR /server
 
 EXPOSE 3333
 RUN npm install
