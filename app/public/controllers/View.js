@@ -272,6 +272,7 @@ const view = function(){
         const currentProject = Data.getProject()
         if (currentProject == null ||  currentProject == undefined ) {return};
         let project = await ProjectController.getId(currentProject.id)
+        if (project == null ||  project == undefined ) {return};
         let containerProjectDetails = document.querySelector('#project_details')
         containerProjectDetails.innerHTML = `
         <div>

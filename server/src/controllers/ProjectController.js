@@ -35,7 +35,7 @@ module.exports = {
     async getId (req, res) {
         const {id} = req.params
         let project = await getById(id)
-        console.log('project',project)
+        console.log('project', project)
         
         if(project == undefined) {
             return res.status(400).json({error: 'Project not found !'})

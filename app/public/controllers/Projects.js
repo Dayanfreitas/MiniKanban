@@ -14,7 +14,7 @@ const ProjectController = function(name){
         }catch(e) {
             console.log(e)
             console.error(e)
-            alert(e.response.data.error)
+            // alert(e.response.data.error)
         }
     }
 
