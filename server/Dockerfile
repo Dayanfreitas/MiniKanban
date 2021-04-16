@@ -8,6 +8,8 @@ WORKDIR /server
 
 EXPOSE 3333
 RUN npm install
+RUN npx knex migrate:latest
+RUN npx knex seed:run
 # RUN npx knex migration:up
 # RUN npx knex seed:RUN
 
