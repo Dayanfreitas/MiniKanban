@@ -5,12 +5,12 @@ services:
     ports:
       - '8080:80'
     restart: always
-  # back-end:
-  #   build: './server'
-  #   ports:
-  #     - 3333:3333
-  #   volumes:
+  back-end:
+    build: './server'
+    ports:
+      - 3333:3333
+    command: "npm start"
+  #  volumes:
   #     - ./server:/server
   #   working_dir: /server
-  #   command: "npm start"
     
