@@ -1,14 +1,16 @@
-# version: '3'
-# services:
-#   node:
-#     image: "node:alpine"
-#     build: './server'
-#     ports: 
-#       - "3333:3333"
-#     volumes:
-#       - "./server:/server"
-#     working_dir: /server
-#     command: npm start
-      
-
+version: '3'
+services:
+  front-end:
+    build: './app'
+    ports:
+      - '8080:80'
+    restart: always
+  # back-end:
+  #   build: './server'
+  #   ports:
+  #     - 3333:3333
+  #   volumes:
+  #     - ./server:/server
+  #   working_dir: /server
+  #   command: "npm start"
     
