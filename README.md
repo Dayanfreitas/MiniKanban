@@ -2,6 +2,12 @@
 ## Mini Kanban
 ![Kanban](https://github.com/Dayanfreitas/MiniKanban/blob/master/imagens/kanban.png)  
 
+## Subir aplicação com docker:
+```
+$ cd MiniKanban 
+$ docker-compose up
+```
+
 ## Front end: app
 O Front-End e apenas um conteúdo estático 
 
