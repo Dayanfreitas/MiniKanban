@@ -35,10 +35,12 @@ O Back-End e desenvolvido e node ultilizando algumas bibliotecas:
 ## Como rodar
 
 - Realizar o downlod do Node
-- Rodar `npm install` e `npm start`
+- Rodar `npm install` 
+- Criar tabela e dados
+- `npm start`
 
 ## Cria tabelas
-- `npx knex migrate:up`
+- `npx knex migrate:latest`
 
 ## Colocar os dados em base
 - `npx knex seed:run`
