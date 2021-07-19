@@ -1,16 +1,20 @@
 version: '3'
 services:
+  back-end:
+    build: .
+    ports:
+      - '3333:3333'
+    volumes:
+      - ./server/:/var/www/server
+      - /var/www/server/node_modules # Remove this if you have pure JS dependencies
+    command: "npm run dev"
+
   front-end:
-    build: './app'
+    image: httpd:2.4
     ports:
       - '8080:80'
     restart: always
-  back-end:
-    build: './server'
-    ports:
-      - 3333:3333
-    command: "npm start"
-  #  volumes:
-  #     - ./server:/server
-  #   working_dir: /server
-    
+    volumes:
+      - ./app/public/:/usr/local/apache2/htdocs/
+    links:
+      - back-end
