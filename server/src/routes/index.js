@@ -6,7 +6,7 @@ const TaskController = require('../controllers/TaskController');
 
 const router = express.Router();
 router.get('/', (req, res) => {
-    res.send('Hello World, Dya');
+    res.send('Hello World, API');
 });
 
 router.get('/project/progress', ProjectController.getProgressCompleted);
