@@ -31,6 +31,8 @@ O Back-End e desenvolvido e node ultilizando algumas bibliotecas:
  SQL query builder para facilitar as consultas e mapeamento relacional
  - Sqlite3  
  Para armezenamento de dados
+ - Jest
+ Para para automação de testes
 
 ## Como rodar
 
@@ -44,3 +46,6 @@ O Back-End e desenvolvido e node ultilizando algumas bibliotecas:
 
 ## Colocar os dados em base
 - `npx knex seed:run`
+
+## Rodar tests
+- `npm run test`
