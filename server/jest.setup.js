@@ -1,6 +1,8 @@
+const request = require("supertest");
 const {Model , transaction} = require('objection');
 const knex = require('./src/database/connection');
 
+global.request = request
 global.beforeAll(async () => {
     global.knex = knex;
     Model.knex(knex);
