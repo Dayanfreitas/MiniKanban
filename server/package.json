@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "pretest": "NODE_ENV=test knex migrate:latest",
-    "test": "APP_SECRET=teste NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest",
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js --ignore __tests__"
+    "dev": "nodemon src/server.js --ignore __tests__",
+    "ci-test" : "NODE_ENV=test knex migrate:latest && APP_SECRET=teste NODE_ENV=test jest"
   },
   "author": "",
   "license": "ISC",
