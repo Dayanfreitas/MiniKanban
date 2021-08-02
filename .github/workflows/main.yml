@@ -32,13 +32,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
-      env:
-        APP_SECRET: app_secret
       with:
-        node-version: ${{ matrix.node-version }}
-#       working-directory
-#     - run: cd ls
-#     - run: cd server 
-    - run: ls 
+        node-version: ${{ matrix.node-version }} 
     - run: npm install
-    - run: APP_SECRET="teste" npm run test 
+    - run: npm run test 
