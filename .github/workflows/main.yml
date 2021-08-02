@@ -31,5 +31,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: cd server 
-    - run: npm install
-    - run: npm run test
+    - run: echo pwd 
+#     - run: npm install
+#     - run: npm run test
