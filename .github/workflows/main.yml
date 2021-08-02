@@ -41,4 +41,4 @@ jobs:
 #     - run: cd server 
     - run: ls 
     - run: npm install
-    - run: npm run test APP_SECRET="teste"
+    - run: APP_SECRET="teste" npm run test 
