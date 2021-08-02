@@ -7,8 +7,14 @@ html {
 }
 
 body {
-  background-color: #1F0538;
+  margin: 0;
+  padding: 0;
+  /* --dark-color: #222222 */
+  --primary-bg: #1F0538;
+
+  background-color: var(--primary-bg);
   color: white;
+  overflow: hidden;
 }
 
 nav {

@@ -16,7 +16,8 @@ class SessionController {
 
         return res.status(200).send({
             user,
-            token: user.generateToken()
+            token: user.generateToken(),
+            message: 'Login efetuado com sucesso !'
         })
     }
 }

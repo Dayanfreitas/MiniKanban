@@ -17,6 +17,17 @@ describe("Authenticated", () => {
             })
         expect(response.status).toBe(200)
     })
+
+    it("should not user", async () => {
+        const response = await request(app)
+            .post('/sessions')
+            .send({
+                email: '',
+                password: validPassword
+            })
+
+        expect(response.status).toBe(401)
+    })
     
     it("should return JWT token when authenticated", async () => {
         const user = await factory.create('User', { password: validPassword })

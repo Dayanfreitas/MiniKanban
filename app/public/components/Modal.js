@@ -96,8 +96,9 @@ const Modal = function () {
     
 
     const open = (template) => {
+        debugger
         const {id} = template.dataset
-        saveChange = save
+        saveChange = template.callback
         name.innerHTML = template.name
 
 
