@@ -13,7 +13,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     res.send('Hello World, API');
 });
-router.post('/sessions' ,SessionController.store)
+router.post('/sessions', SessionController.store)
 
 router.use(authMiddleware);
 router.get('/dashboard' ,(req, res) => {

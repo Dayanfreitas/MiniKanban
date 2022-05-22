@@ -111,16 +111,6 @@
 <body>
     <div id="loading"></div>
 
-<!--    <div class="alert">-->
-<!--        <span class="icon">-->
-<!--            <i class="bi bi-check"></i>-->
-<!--        </span>-->
-<!--        <span class="msg">Sucesso</span>-->
-<!--        <span class="btn-close">-->
-<!--            <i class="bi bi-x-lg"></i>-->
-<!--        </span>-->
-<!--    </div>-->
-
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -130,58 +120,7 @@
     </div>
     <div id="root"></div>
 
-<!--    <div>-->
-<!--    </div>-->
-<!--    <nav>-->
-<!--        <div>-->
-<!--            <span>Projetos concluídos:</span>-->
-<!--            <div id="progress-bar-all-project" class="container-progress-bar"></div>-->
-<!--            <div id="project_details" class="container-statistics"></div>-->
-<!--        </div>-->
-
-<!--        <div>-->
-<!--            <label for="select_project">Projeto:</label>-->
-<!--            <select id="select_project" onchange="changeProject(event)"></select>-->
-<!--        </div>-->
-
-<!--        <div id="project-action">-->
-
-<!--            <button type="button" onclick="addNewProject()">Novo projeto</button>-->
-<!--            <button type="button" onclick="editProject()">Editar projeto</button>-->
-<!--            <button id="btn-project-disable" type="button" onclick="deleteProject()">Desativar projeto</button>-->
-<!--            <button id="btn-project-enable" type="button" onclick="activedProject()">Ativar projeto</button>-->
-
-<!--        </div>-->
-<!--        <input type="checkbox" id="filtro_status" name="status" value="I" checked onclick="view.createSelectOptionsProject()">-->
-<!--        <label for="filtro_status">Filtrar inativo(s)</label>-->
-<!--    </nav>-->
-
-<!--    <div id="container-boards" class="boards">-->
-<!--        <div class="board">-->
-<!--            <div class="nav-board">-->
-<!--                <h3>Atividades <div class="status yellow"></div></h3>-->
-<!--                <button id="btn-add-task" type="button" class="btn-round" onclick="addNewTask()"><i class='fa fa-plus'></i></button>-->
-<!--            </div>-->
-
-<!--            <div id="dropzone-pendente" class="dropzone"></div>-->
-<!--        </div>-->
-<!--        <div class="board">-->
-<!--            <h3>Em andamento <div class="status blue"></div></h3>-->
-<!--            <div id="dropzone-em-andamento" class="dropzone"></div>-->
-<!--        </div>-->
-<!--        <div class="board ">-->
-<!--            <h3>Concluida <div class="status green"></div></h3>-->
-<!--            <div id="dropzone-concluida" class="dropzone"></div>-->
-<!--        </div>-->
-
-<!--        <div id="delete_board" class="board ">-->
-<!--            <h3>Cancelados <div class="status red"></div></h3>-->
-<!--            <div id="dropzone-cancelada"  class="dropzone"></div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <button onclick="openModelLogin()">das </button>-->
-
+    <!-- JS -->
     <script src="storage.js"></script>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -190,21 +129,15 @@
     <script src="controllers/Projects.js"></script>
     <script src="controllers/Task.js"></script>
     <script src="controllers/View.js"></script>
+    <script src="controllers/Session.js"></script>
 
     <script src="components/Modal.js"></script>
     <script src="components/NoticeAlert.js"></script>
-
+    
+    <script src="js/ReadFile.js"></script>
+    <script src="js/router.js"></script>
+    
+    <!-- main -->
     <script src="script.js" defer></script>
-    <script>
-        function logout() {
-            Data.clearAll()
-            router.go('/login')
-            NoticeAlert.flash({msg: 'Logout efetuado com sucesso', type: 'success'});
-            
-            // Limpar todo storage
-            // Data.clearAll();
-            // Fazer render de tela
-        }
-    </script>
 </body>
 </html>
