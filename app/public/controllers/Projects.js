@@ -21,11 +21,10 @@ const ProjectController = function(name){
     async function update (project) {
         try {
             const resposta = await API.put(name, project)
+            NoticeAlert.flash({ msg: resposta.data.msg, type: 'success' })
             return resposta.data.project
         }catch(e) {
-            console.log(e)
-            console.error(e)
-            alert(e.response.data.error)
+            NoticeAlert.flash({ msg: e.response.data.error, type: 'error' })
         }
     }
     
@@ -53,7 +52,8 @@ const ProjectController = function(name){
             })
 
             const project = await ProjectController.update(Project)
-            Data.save(project)
+            if (project)
+                Data.save(project)
         }else {
             const Project = {}
             nodeList.forEach((el) => {

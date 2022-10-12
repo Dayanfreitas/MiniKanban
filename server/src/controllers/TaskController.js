@@ -1,6 +1,4 @@
 const connection = require('../database/connection');
-const ProjectController = require("./ProjectController")
-
 const status = {
     PENDENTE: 'P',
     EM_ANDAMENTO: 'A',
@@ -129,5 +127,7 @@ module.exports = {
         return res.json({msg: 'Delete'})
     },
     
-    calcProcess,
+    async calcProcess(id) {
+        calcProcess (id)
+    }
 }

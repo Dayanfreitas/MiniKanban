@@ -4,10 +4,6 @@ const jwt = require('jsonwebtoken');
 
 
 class User extends Password(Model) {
-    // static beforeInsert(args) {
-    //     console.log('Teste action !!')
-    // }
-
     static get tableName() {
         return 'users';
     }

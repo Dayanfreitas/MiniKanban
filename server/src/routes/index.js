@@ -2,6 +2,7 @@
 const express = require('express');
 const { celebrate, Segments, Joi } = require('celebrate');
 
+const UserController = require('../controllers/UserController');
 const SessionController = require('../controllers/SessionController');
 const ProjectController = require('../controllers/ProjectController');
 const TaskController = require('../controllers/TaskController');
@@ -12,9 +13,9 @@ const router = express.Router();
 router.get('/', (req, res) => {
     res.send('Hello World, API');
 });
-router.post('/sessions' ,SessionController.store)
+router.post('/sessions', SessionController.store)
 
-router.use(authMiddleware)
+router.use(authMiddleware);
 router.get('/dashboard' ,(req, res) => {
     return res.status(200).send();
 })

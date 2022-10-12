@@ -1,7 +1,11 @@
+const ROOT = document.querySelector("#root")
 console.log('Init...')
+console.log('ROOT', ROOT);
+
 // Data.clearProject()
-view.loading_hide()
-view.render_kanban()
+// view.loading_hide()
+// view.loading_show()
+// view.render_kanban()
 
 async function changeProject (event) {
     event.preventDefault()
@@ -57,4 +61,25 @@ async function activedProject () {
         view.render_kanban()
     }, 200)
 
+}
+
+async function login() {
+    const email = document.getElementById('email').value
+    const password = document.getElementById('password').value
+
+    Session.login({ email, password })
+}
+
+function logout() {
+    Session.logout()    
+}
+
+router.use('root', ROOT)
+router.use('data', Data)
+
+if (!Data.getToken()) {
+    router.go('/login')
+}else {
+    router.go('/dashboard')
+    view.render_kanban()
 }

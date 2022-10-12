@@ -56,8 +56,6 @@ module.exports = {
 
         return res.json({id, project: projectOBJ, msg: 'Project successfully created !'})
     },
-    
-   
 
     async update (req, res) {
         try {
