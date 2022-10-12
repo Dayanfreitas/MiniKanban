@@ -4,7 +4,7 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('users').insert([
-        {id:1, name: 'Dayan Freitas', email: 'user@gmail.com', password: '$2a$12$IZlTyHRY5CxGreNQdcYwxuCalEkgyB5.Y1PNcZpXAoFz0M/wSxzHW'}
+        {id:1, name: 'usuario', email: 'usuario@gmail.com', password: '$2b$12$xfaZUOef1thI..Q8cMpIVelquZWGND90ecFjmdNK5.kAfNxyM1zh.'},
       ]);
     });
 };

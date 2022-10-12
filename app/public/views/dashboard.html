@@ -1,4 +1,10 @@
-<button type="button" onclick="logout()">Sair</button>
+<nav>
+    <button type="button" onclick="logout()">
+        Sair
+        <img height="15" width="15" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAA2ElEQVRYhe2WTw7BQBSHv70/G5Q4DS4gXIO92OFEwjXoqlFOUcS2YdHXtJbzppmGzC+ZRRfvfd9M86YFH58fywBY1AmPgTewdA3vA5HAr8DQwz38b+EBcBG4zXoBIbADenUIlNcDmJtIlC+cWJ5N0wBGwF76pMDMtUSelfS5A926JA7SZ2taWJXEWHqEmuKAYixv6MayJfVPjUAVEm2KiVDH5nM8kbqzjUAuofkhOYrAxlZAk7XAE6DjCtokO/Z85ykwdQWH76s4cQ2HbNxOZO/c2bH7+KjyAVc/bvBAwtn9AAAAAElFTkSuQmCC"/>
+    </button>
+</nav>
+
 <div id="container-boards" class="boards">
     <div class="board">
         <div class="nav-board">
@@ -52,7 +58,6 @@
         <button id="btn-project-enable" type="button" onclick="activedProject()">Ativar projeto</button>
         <!---->
     </div>
-    <input type="checkbox" id="filtro_status" name="status" value="I" checked
-           onclick="view.createSelectOptionsProject()">
     <label for="filtro_status">Filtrar inativo(s)</label>
+    <input type="checkbox" id="filtro_status" name="status" value="I" checked onclick="view.createSelectOptionsProject()">
 </nav>

@@ -1,7 +1,7 @@
 
 const view = function(){
     let currentProject = null
-    const filterStatus = document.querySelector('#filtro_status')
+    let filterStatus = document.querySelector('#filtro_status')
 
     const STATUS = {
         "CAN": 'red',
@@ -132,7 +132,8 @@ const view = function(){
     }
 
     const createSelectOptionsProject = async () => {
-        let status = filterStatus.checked ? ['A', 'I'] : ['A']
+        filterStatus = document.querySelector('#filtro_status')
+        let status = filterStatus && filterStatus.checked ? ['A', 'I'] : ['A']
         let listProject = await ProjectController.getAll({status})
 
         const clearChild = (list) => {
